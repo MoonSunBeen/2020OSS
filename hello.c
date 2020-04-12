@@ -2,5 +2,9 @@
 
 void main(){
 	printf("hello world!\n");
+
 	printf("2020OSS class\n");
+
+	return 0;
+
 }
