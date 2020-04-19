@@ -17,4 +17,5 @@ int updateProduct(Product* p); //list에 product를 추가하는 함수
 int deleteProduct(Product* p); //list에 입력된 product를 삭제하는 함수
 void saveData(Product* p[], int count);
 int loadData(Product* p[]);
+void searchName(Product* p[], int count);
 int selectMenu();
