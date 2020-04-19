@@ -11,4 +11,4 @@ $(DTARGET) : $(OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^
 
 clean :
-        rm *.o $(TARGET) $(DTARGET)
+	rm *.o $(TARGET) $(DTARGET)
