@@ -81,3 +81,52 @@ int selectMenu() {
 	return menu;
 }
 
+void searchName(Product* p[], int count) {
+	int scount = 0;
+	char search[20];
+
+	printf("원하는 제품명은? ");
+	scanf("%s", search);
+
+    printf("*******************************************************\n");
+
+	for (int i = 0; i < count; i++) {
+		if (p[i] == NULL) continue;
+		if (strstr(p[i]->name, search)) {
+			readProduct(*p[i]);
+		} scount++;
+	}
+	if (scount == 0) printf("==> 검색결과 없음!!!\n");
+
+}
+
+void saveData(Product* p[], int count) {
+	FILE* fp;
+
+	fp = fopen("product.txt", "w");
+	for (int i = 0; i < count; i++) {
+		if (p[i] != NULL) fprintf(fp, "%s %d %d %d\n", p[i]->name, p[i]->weight, p[i]->price, p[i]->star);
+	}
+	fclose(fp);
+	printf("==> 저장됨! \n");
+}
+
+int loadData(Product* p[]) {
+	FILE* fp;
+
+	fp = fopen("product0.txt", "r");
+	if (fp == NULL) {
+		printf("==> 파일이 없습니다!\n");
+		return 0;
+	}
+
+	int count = 0;
+	for (;; count++) {
+		p[count] = (Product*)malloc(sizeof(Product));
+		fscanf(fp, "%s %d %d %d\n", p[count]->name, &p[count]->weight, &p[count]->price, &p[count]->star);
+		if (feof(fp)) break;
+	}
+	fclose(fp);
+	printf("==> 로딩성공!!!\n");
+	return count+1;
+}
