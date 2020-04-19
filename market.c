@@ -14,7 +14,6 @@ int main(void) {
     
     curcount = loadData(pp);
 	count = curcount;
-
 	while (1) {
 		menu = selectMenu();
 		if (menu == 0) break;

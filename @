@@ -120,14 +120,14 @@ int loadData(Product* p[]) {
 		return 0;
 	}
 
-	int count = 0;
+	int count = 1;
 	for (;; count++) {
 		p[count] = (Product*)malloc(sizeof(Product));
 		fscanf(fp, "%s %d %d %d\n", p[count]->name, &p[count]->weight, &p[count]->price, &p[count]->star);
 		if (feof(fp)) break;
 	}
 	fclose(fp);
-
+listProduct(p, 1);
 	printf("==> 로딩성공!!!\n");
-	return count+1;
+	return count;
 }
