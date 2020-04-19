@@ -1,4 +1,4 @@
-#incldue "manager.h"
+#include "manager.h"
 
 int addProduct(Product* p) {
 	printf("제품명는 ? ");
