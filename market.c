@@ -48,6 +48,10 @@ int main(void) {
 				printf("삭제하지 않겠습니다.\n");
 			}
 		}
+		else if (menu == 5) {
+			if (count == 0) printf("==> 데이터가 없습니다!\n");
+			else saveData(pp, curcount);
+		}
 
 	}
 	printf("종료됨!\n");
