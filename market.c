@@ -8,7 +8,7 @@ int main(void) {
 #endif
 
 
-	Product_1* pp[100];
+	Product* pp[100];
 	int curcount = 0, menu;
 	int count = 0;
     
@@ -19,7 +19,12 @@ int main(void) {
 		menu = selectMenu();
 		if (menu == 0) break;
 		if (menu == 1) {
-		    listProduct(pp, curcount);
+		   			if (curcount > 0) {
+				listProduct(pp, curcount);
+			}
+			else {
+				printf("데이터가 없습니다 !\n");
+			}
 		}
 		else if (menu == 2) {
 			pp[curcount] = (Product*)malloc(sizeof(Product));
