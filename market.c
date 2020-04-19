@@ -1,6 +1,11 @@
 #include "manager.h"
+#define DEBUG
 
 int main(void) {
+
+#ifdef DEBUG
+        printf("Debug[%s] : call %s \n", __FILE__, __func__ );
+#endif
 
 
 	Product_1* pp[100];
