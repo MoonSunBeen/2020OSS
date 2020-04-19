@@ -15,4 +15,5 @@ void listProduct(Product* m[], int count); //주어진 lsit의 product를 출력
 int selectDataNo(Product* p[], int count); //menu 목록 수행 중, 확인이 필요한 경우 사용하는 함수 
 int updateProduct(Product* p); //list에 product를 추가하는 함수
 int deleteProduct(Product* p); //list에 입력된 product를 삭제하는 함수
+void saveData(Product* p[], int count);
 int selectMenu();
