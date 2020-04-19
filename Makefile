@@ -5,10 +5,10 @@ DTARGER = project_debug
 OBJECTS = market.c manager.o
 
 $(TARGET) : $(OBJECTS)
-         $(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 
 $(DTARGET) : $(OBJECTS)
-        $(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 
 clean :
         rm *.o $(TARGET) $(DTARGET)
