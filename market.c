@@ -52,6 +52,10 @@ int main(void) {
 			if (count == 0) printf("==> 데이터가 없습니다!\n");
 			else saveData(pp, curcount);
 		}
+		else if (menu == 6) {
+			if (count == 0) printf("==> 데이터가 없습니다!\n");
+			else searchName(pp, curcount);
+		}
 
 	}
 	printf("종료됨!\n");
